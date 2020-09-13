@@ -1,0 +1,34 @@
+import React from 'react';
+import HomeIcon from '@material-ui/icons/Home';
+import GitHubIcon from 'react-ionicons/lib/LogoGithub';
+import { SideBarContainer, WrapperBtn } from '../styles/sidebar.js';
+
+export default function SideBar(props){
+    return(
+        <SideBarContainer>
+            <div className="header">
+                <a 
+                    href="https://www.flaticon.com/br/autores/nikita-golubev" 
+                    title="Nikita Golubev"
+                >
+                    <img src={require('../images/logos/pokemon.png')} />
+                </a>
+                    <h1>Pokedex</h1>
+            </div>
+            <WrapperBtn>
+                <HomeIcon style={{color: "white", fontSize: 35}} />
+                <button>Home</button>
+            </WrapperBtn>
+
+            <WrapperBtn>
+                <HomeIcon style={{color: "white", fontSize: 35}} />
+                <button>Pokemons</button>
+            </WrapperBtn>
+
+            <WrapperBtn>
+                <GitHubIcon color="#fff" fontSize="35px" />
+                <button>GitHub</button>
+            </WrapperBtn>
+        </SideBarContainer>
+    )
+}
