@@ -15,18 +15,18 @@ export default function SideBar(props){
                 </a>
                     <h1>Pokedex</h1>
             </div>
-            <WrapperBtn>
-                <HomeIcon style={{color: "white", fontSize: 35}} />
+            <WrapperBtn onClick={props.onClickHome}>
+                <HomeIcon style={{color: "white", fontSize: 35, transition: '0.3s'}} />
                 <button>Home</button>
             </WrapperBtn>
 
-            <WrapperBtn>
-                <HomeIcon style={{color: "white", fontSize: 35}} />
+            <WrapperBtn onClick={props.onClickPokemon}>
+                <img src={require('../images/logos/pokemon.png')} />
                 <button>Pokemons</button>
             </WrapperBtn>
 
-            <WrapperBtn>
-                <GitHubIcon color="#fff" fontSize="35px" />
+            <WrapperBtn onClick={props.onClickGitHub}>
+                <GitHubIcon color="#fff" fontSize="35px" style={{transition: '0.3s'}} />
                 <button>GitHub</button>
             </WrapperBtn>
         </SideBarContainer>

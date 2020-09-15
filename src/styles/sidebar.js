@@ -39,11 +39,19 @@ export const WrapperBtn = styled.div `
     align-items: center;
     padding: 10px;
     cursor: pointer;
+    transition: 0.2s;
+    
     :hover {
         background-color: ${Colors.mainColors.blueMid};
         transition: 0.2s;
     }
-    transition: 0.2s;
+    
+    :hover > *{
+        width: 50px;
+        height: 50px;
+        transition: 0.3s;
+        font-size: 1.5em;
+    }
 
     button:focus{
         outline: 0;
@@ -59,6 +67,12 @@ export const WrapperBtn = styled.div `
         margin-left: 10px;
         font-size: 1em;
         align-self: center;
+        cursor: pointer;
+    }
+    img{
+        width: 33px;
+        height: 33px;
+        transition: 0.3s;
     }
 `
     
