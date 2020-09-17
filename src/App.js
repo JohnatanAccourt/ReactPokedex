@@ -9,9 +9,9 @@ import './styles/reset.css';
 import { Container } from './styles/grid';
 
 function App(props) {
-    const [home, setHome] = useState(false);
+    const [home, setHome] = useState(true);
     const [pokemon, setPokemon] = useState(false);
-    const [github, setGitHub] = useState(true);
+    const [github, setGitHub] = useState(false);
 
     return (
         <Container>

@@ -16,7 +16,7 @@ import {
 } from '../styles/home';
 
 import Colors from '../constants/Colors';
-
+import Color from 'color-thief-react';
 
 export default function Home(props){
     return(
@@ -30,7 +30,7 @@ export default function Home(props){
                 <img src={require('../images/samples/sample.png')} alt="pokemon"/>
                 <div>
                     <h1>Pokedex APP</h1>
-                    <h3>Baixe o app do pokedex.js se precisar de uma versão poket</h3>
+                    <h3>Baixe o app do ReactPokedex! com isso você pode ver a qualquer momento todos os pokémons.</h3>
                     <button>Download APP</button>
                 </div>
             </HomeBanner>
@@ -40,40 +40,60 @@ export default function Home(props){
             </HomeBtn>
 
             <HomePokemons>
-                <div>
-                    <img src={require("../images/samples/pikachu.png")}/>
-                    <div>
-                        <h2>Pikachu</h2>
+                <Color src={require("../images/samples/pikachu.png")} format="hex">
+                {({data, loading, error}) => (
+                    <div style={{backgroundColor: data }}>
+                        <img src={require("../images/samples/pikachu.png")}/>
+                        <div>
+                            <h2>Pikachu</h2>
+                        </div>
                     </div>
-                </div>
+                )}
+                </Color>
 
-                <div>
-                    <img src={require("../images/samples/pikachu.png")}/>
-                    <div>
-                        <h2>Pikachu</h2>
-                    </div> 
-                </div>
-
-                <div>
-                    <img src={require("../images/samples/sample.png")}/>
-                    <div>
-                        <h2>Pikachu</h2>
+                <Color src={require("../images/samples/sample.png")} format="hex">
+                {({data, loading, error}) => (
+                    <div style={{backgroundColor: data}}>
+                        <img src={require("../images/samples/sample.png")}/>
+                        <div>
+                            <h2>Pikachu</h2>
+                        </div>
                     </div>
-                </div>
+                )}
+                </Color>
 
-                <div>
-                    <img src={require("../images/samples/pikachu.png")}/>
-                    <div>
-                        <h2>Pikachu</h2>
+                <Color src={require("../images/samples/sample.png")} format="hex">
+                {({data, loading, error}) => (
+                    <div style={{backgroundColor: data}}>
+                        <img src={require("../images/samples/sample.png")}/>
+                        <div>
+                            <h2>Pikachu</h2>
+                        </div>
                     </div>
-                </div>
+                )}
+                </Color>
 
-                <div>
-                    <img src={require("../images/samples/pikachu.png")}/>
-                    <div>
-                        <h2>Pikachu</h2>
+                <Color src={require("../images/samples/pikachu.png")} format="hex">
+                {({data, loading, error}) => (
+                    <div style={{backgroundColor: data}}>
+                        <img src={require("../images/samples/pikachu.png")}/>
+                        <div>
+                            <h2>Pikachu</h2>
+                        </div>
                     </div>
-                </div>
+                )}
+                </Color>
+
+                <Color src={require("../images/samples/pikachu.png")} format="hex">
+                {({data, loading, error}) => (
+                    <div style={{backgroundColor: data}}>
+                        <img src={require("../images/samples/pikachu.png")}/>
+                        <div>
+                            <h2>Pikachu</h2>
+                        </div>
+                    </div>
+                )}
+                </Color>
             </HomePokemons>
 
             <h5>Acompanhe Pokémon nas redes sociais:</h5>

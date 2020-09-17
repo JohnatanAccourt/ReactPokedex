@@ -1,6 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Colors from '../constants/Colors';
 import img from '../images/logos/me.jpg';
+
+import { 
+    textWrap, 
+    toBlueMid,
+    toBlueLight 
+} from './animations';
 
 const font = 'Roboto';
 const fontLight = '400'; 
@@ -19,7 +25,21 @@ export const GithubContainer = styled.div `
         height: 100vh;
         width: 75%;
         background: ${Colors.mainColors.blueMid};
-        h2, h3, p{
+        animation: ${toBlueMid} 1s 0s forwards;
+        h2{
+            width: 90%;
+            margin: auto;
+            text-align: left;
+            font-size: 3em;
+            color: white;
+            font-family: ${font};
+            font-weight: ${fontBold};
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: block;
+            animation: ${textWrap} 3s 0s forwards;
+        }
+        h3, p{
             width: 90%;
             margin: auto;
             text-align: left;
@@ -60,12 +80,12 @@ export const GithubContainer = styled.div `
         width: 25%;
         background: ${Colors.mainColors.blueLight};
         display: flex;
-        /* justify-content: center; */
         align-items: center;
         flex-direction: column;
+        animation: ${toBlueLight} 1s 0s forwards;
         div{
-            width: 230px;
-            height: 230px;
+            width: 200px;
+            height: 200px;
             border-radius: 100%;
             background-image: url(${img});
             background-size: cover;

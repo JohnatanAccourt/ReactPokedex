@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import Colors from '../constants/Colors';
 
+import { 
+    textWrap, 
+    toBlueMid,
+    toBlueLight,
+    toBlueStrong,
+    imgBannerExtend,
+    textSlide,
+    colorfull
+} from './animations';
+
 const font = 'Roboto';
 const fontLight = '400'; 
 const fontMedium = '500'; 
@@ -12,7 +22,7 @@ export const HomeContainer = styled.div `
     overflow-x: scroll;
     overflow-y: none;
     overflow-x: hidden;
-    
+    animation: ${toBlueMid} 1.5s 0s forwards;
     h5{
         width: 95%;
         margin: auto;
@@ -44,11 +54,9 @@ export const HomeHeader = styled.div `
     align-items: center;
     height: 10vh;
     max-width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding: 4px 5% 4px 5%;
     background-color: ${Colors.mainColors.blueStrong};
+    animation: ${toBlueStrong} 1s 0s forwards;
     h1{
         color: white;
         font-size: 1.5em; 
@@ -75,7 +83,8 @@ export const HomeBanner = styled.div `
         position: relative;
         height: 100vh;
         width: 540px;
-        top: -150px;
+        top: -0px;
+        animation: ${imgBannerExtend} 3s 0.5s forwards;
     }
     div{
         width: 60%;
@@ -86,20 +95,32 @@ export const HomeBanner = styled.div `
         flex-direction: column;
         align-items: center;
         h1{
+            opacity: 0;
+            position: relative;
+            left: 200px;
             text-align: center;
             color: white;
             font-family: ${font};
             font-weight: ${fontBold};
             margin-bottom: 5px;
+            animation: ${textSlide} 3s 1s forwards;
         }
         h3{
+            opacity: 0;
+            position: relative;
+            left: 200px;
             text-align: center;
             color: white;
             font-family: ${font};
             font-weight: ${fontLight};
             width: 90%;
+            animation: ${textSlide} 3s 1s forwards;
+
         }
         button{
+            opacity: 0;
+            position: relative;
+            left: 200px;
             padding: 0;
             border: none;
             outline: none;
@@ -114,6 +135,7 @@ export const HomeBanner = styled.div `
             font-size: 1em;
             align-self: center;
             cursor: pointer;
+            animation: ${textSlide} 3s 0.5s forwards;
         }
 
     }
@@ -221,12 +243,17 @@ export const HomePokemons = styled.div `
         flex-direction: column;    
         height: 38vh;
         width: 200px;
-        background-color: ${Colors.mainColors.yellow};
-
         img{
             padding: 5px 0px 5px 0px;
             height: 80%;
-            width: 90%; 
+            width: 90%;
+            transition: 0.4s;
+        }
+        img:hover {
+            filter: drop-shadow(7px 7px 0 rgba(0, 0, 0, 0.2));
+            height: 82%;
+            width: 92%;
+            transition: 0.4s;
         }
         div{
             justify-content: center;
@@ -242,5 +269,4 @@ export const HomePokemons = styled.div `
         }
     }
 `
-
 
