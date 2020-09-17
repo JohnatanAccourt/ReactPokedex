@@ -10,6 +10,7 @@ export default {
         empty: '#727272',
         life: '#0BE955',
         attack: '#AE0707',
+        specialAttack: '#770000',
         defense: '#9E01AF',
         specialDefense: '#6D0078',
         speed: '#01326A',

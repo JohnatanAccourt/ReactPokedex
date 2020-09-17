@@ -247,13 +247,13 @@ export const HomePokemons = styled.div `
             padding: 5px 0px 5px 0px;
             height: 80%;
             width: 90%;
-            transition: 0.4s;
+            transition: 1s;
         }
         img:hover {
             filter: drop-shadow(7px 7px 0 rgba(0, 0, 0, 0.2));
             height: 82%;
             width: 92%;
-            transition: 0.4s;
+            transition: 0.2s;
         }
         div{
             justify-content: center;

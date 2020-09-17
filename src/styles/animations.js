@@ -31,6 +31,11 @@ export const textSlide = keyframes `
     to { left: 0px; opacity: 1;}
 ` 
 
+export const fillSlowly = keyframes `
+    from { width: 0; opacity: 1; }
+    to { width: static; opacity: 1; }
+` 
+
 
 
 
