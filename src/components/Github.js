@@ -26,19 +26,19 @@ export default function Github(props){
             </div>
 
             <section>
-                <a href="https://github.com/JohnatanAccourt" target="_blank" title="Github">
+                <a href="https://github.com/JohnatanAccourt" target="_blank" rel="Github" title="Github">
                     <GitHubIcon color="#fff" fontSize="35px" />
                 </a>
 
-                <a href="https://www.linkedin.com/in/johnatan-accourt-93937a19a/" target="_blank" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/johnatan-accourt-93937a19a/" rel="linkedin" target="_blank" title="LinkedIn">
                     <LinkedinIcon color="#fff" fontSize="35px" />
                 </a>
 
-                <a href="mailto:johnatan1999accourt@gmail.com" target="_blank" title="Email">
+                <a href="mailto:johnatan1999accourt@gmail.com" target="_blank" rel="email" title="Email">
                     <EmailIcon style={{color: "white", fontSize: 35}} />
                 </a>
 
-                <a href="https://www.instagram.com/johll_99/" target="_blank" title="Instagran">
+                <a href="https://www.instagram.com/johll_99/" target="_blank" rel="instagran" title="Instagran">
                     <InstagranIcon color="#fff" fontSize="35px" />
                 </a>
             </section>

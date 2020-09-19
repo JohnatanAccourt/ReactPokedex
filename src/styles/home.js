@@ -1,20 +1,17 @@
 import styled from 'styled-components';
 import Colors from '../constants/Colors';
 
-import { 
-    textWrap, 
+import {
     toBlueMid,
-    toBlueLight,
     toBlueStrong,
     imgBannerExtend,
     textSlide,
-    colorfull
 } from './animations';
 
 const font = 'Roboto';
 const fontLight = '400'; 
 const fontMedium = '500'; 
-const fontBold = '700'; 
+const fontBold = '700';
 
 export const HomeContainer = styled.div `
     height: 100vh;
@@ -159,7 +156,7 @@ export const HomeSocial = styled.div `
         border-radius: 10px;
         margin-left: 1%;
     }
-    button:hover {
+    a > button:hover {
         background-color: ${Colors.mainColors.green};
         color: white;
         height: 35px;
@@ -175,14 +172,14 @@ export const HomeSocial = styled.div `
         font-family: ${font};
         font-weight: ${fontMedium};
     }
-    button{
-        padding: 0;
+    a > button{
+        padding: 10;
         border: none;
         outline: none;
         font-family: Goudy Bookletter 1911, sans-serif;
         font-weight: ${fontBold};
         background-color: ${Colors.mainColors.yellow};
-        width: 85%;
+        width: 100px;
         height: 25px;
         margin-top: 10px;
         border-radius: 10px;

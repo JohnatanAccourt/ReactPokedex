@@ -10,6 +10,7 @@ export default function SideBar(props){
                 <a 
                     href="https://www.flaticon.com/br/autores/nikita-golubev" 
                     title="Nikita Golubev"
+                    alt="pokeball"
                 >
                     <img src={require('../images/logos/pokemon.png')} />
                 </a>
@@ -21,7 +22,7 @@ export default function SideBar(props){
             </WrapperBtn>
 
             <WrapperBtn onClick={props.onClickPokemon}>
-                <img src={require('../images/logos/pokemon.png')} />
+                <img src={require('../images/logos/pokemon.png')} alt="pokeball"/>
                 <button>Pokemons</button>
             </WrapperBtn>
 

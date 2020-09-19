@@ -23,7 +23,13 @@ function App(props) {
                 />
             </div>
             <div className="mainGrid">
-                { home ? <Home /> : pokemon ? <Pokemons /> : github ? <Github /> : <Home /> }
+                { home ? 
+                    <Home onClickPokemon={() => [setPokemon(true), setHome(false), setGitHub(false)]}/> 
+                : pokemon ? 
+                    <Pokemons /> 
+                : github ? 
+                    <Github /> 
+                :   <Home /> }
             </div>
         </Container>
     );

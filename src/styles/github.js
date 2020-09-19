@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Colors from '../constants/Colors';
 import img from '../images/logos/me.jpg';
 
@@ -10,7 +10,7 @@ import {
 
 const font = 'Roboto';
 const fontLight = '400'; 
-const fontMedium = '500'; 
+// const fontMedium = '500'; 
 const fontBold = '700'; 
 
 export const GithubContainer = styled.div `

@@ -1,9 +1,7 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Colors from '../constants/Colors';
-import img from '../images/logos/me.jpg';
 
 import { 
-    textWrap, 
     toBlueMid,
     toBlueLight,
     fillSlowly
@@ -31,7 +29,7 @@ export const PokemonsContainer = styled.div `
         overflow-x: hidden;
 
         height: 100vh;
-        max-width: 75%;
+        max-width: 100%;
         margin-left: auto;
         background: ${Colors.mainColors.blueMid};
         animation: ${toBlueMid} 1s 0s forwards;
@@ -62,6 +60,7 @@ export const PokemonsContainer = styled.div `
                 height: 82%;
                 width: 92%;
                 transition: 0.2s;
+                cursor: pointer;
             }
             div{
                 margin: 0;
@@ -82,7 +81,7 @@ export const PokemonsContainer = styled.div `
 
     aside{
         height: 100vh;
-        width: 25%;
+        /* width: 0%; */
         background: ${Colors.mainColors.blueLight};
         display: flex;
         align-items: center;
@@ -101,7 +100,7 @@ export const PokemonsContainer = styled.div `
             align-items: center;
             flex-direction: column;
             width: 100%;
-            height: 40%;
+            height: 50%;
             background-color: ${Colors.mainColors.blueStrong};
             h1{
                 text-align: center;
@@ -156,43 +155,49 @@ export const PokemonsContainer = styled.div `
                 .filled_bar_life{
                     height: 100%;
                     background-color: ${Colors.statsColors.life};
-                    border-radius: 30px 0px 0px 30px;
+                    border-radius: 30px;
                     opacity: 0;
+                    transition: 0.6s;
                     animation: ${fillSlowly} 3s 0.5s normal forwards;
                 }
                 .filled_bar_attack{
                     height: 100%;
                     background-color: ${Colors.statsColors.attack};
-                    border-radius: 30px 0px 0px 30px;
+                    border-radius: 30px;
                     opacity: 0;
+                    transition: 0.6s;
                     animation: ${fillSlowly} 3s 0.5s normal forwards;
                 }
                 .filled_bar_special_attack{
                     height: 100%;
                     background-color: ${Colors.statsColors.specialAttack};
-                    border-radius: 30px 0px 0px 30px;
+                    border-radius: 30px;
                     opacity: 0;
+                    transition: 0.6s;
                     animation: ${fillSlowly} 3s 0.5s normal forwards;
                 }
                 .filled_bar_defesa{
                     height: 100%;
                     background-color: ${Colors.statsColors.defense};
-                    border-radius: 30px 0px 0px 30px;
+                    border-radius: 30px;
                     opacity: 0;
+                    transition: 0.6s;
                     animation: ${fillSlowly} 3s 0.5s normal forwards;
                 }
                 .filled_bar_special_defesa{
                     height: 100%;
                     background-color: ${Colors.statsColors.specialDefense};
-                    border-radius: 30px 0px 0px 30px;
+                    border-radius: 30px;
                     opacity: 0;
+                    transition: 0.6s;
                     animation: ${fillSlowly} 3s 0.5s normal forwards;
                 }
                 .filled_bar_speed{
                     height: 100%;
                     background-color: ${Colors.statsColors.speed};
-                    border-radius: 30px 0px 0px 30px;
+                    border-radius: 30px;
                     opacity: 0;
+                    transition: 0.6s;
                     animation: ${fillSlowly} 3s 0.5s normal forwards;
                 }
             }

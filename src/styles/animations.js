@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from 'styled-components';
+import { keyframes } from 'styled-components';
 import Colors from '../constants/Colors';
 
 export const textWrap = keyframes `

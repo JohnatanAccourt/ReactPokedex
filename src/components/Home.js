@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
 import WebIcon from '@material-ui/icons/Web';
 import StoreIcon from '@material-ui/icons/Store';
 import FacebookIcon from 'react-ionicons/lib/LogoFacebook';
@@ -19,6 +21,20 @@ import Colors from '../constants/Colors';
 import Color from 'color-thief-react';
 
 export default function Home(props){
+    const [data, setData] = useState([]);
+
+    async function loadData(){
+        axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=${Math.floor(Math.random() * 1049)}&limit=5`)
+        .then(function(res){
+            setData(res.data.results)
+
+        })
+        .catch(function (error) {  console.log(error)  })
+    }
+
+    useEffect(() => {
+        loadData();
+    }, [])
     return(
         <HomeContainer>
             <HomeHeader>
@@ -40,60 +56,18 @@ export default function Home(props){
             </HomeBtn>
 
             <HomePokemons>
-                <Color src={require("../images/samples/pikachu.png")} format="hex">
-                {({data, loading, error}) => (
-                    <div style={{backgroundColor: data }}>
-                        <img src={require("../images/samples/pikachu.png")}/>
-                        <div>
-                            <h2>Pikachu</h2>
+                {data.map(index => (
+                    <Color src={require("../images/samples/pikachu.png")} format="hex">
+                    {({data, loading, error}) => (
+                        <div style={{backgroundColor: data }}>
+                            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${index.url.split('/')[6]}.svg`} alt="pokemon" />
+                            <div>
+                                <h2>{index.name}</h2>
+                            </div>
                         </div>
-                    </div>
-                )}
-                </Color>
-
-                <Color src={require("../images/samples/sample.png")} format="hex">
-                {({data, loading, error}) => (
-                    <div style={{backgroundColor: data}}>
-                        <img src={require("../images/samples/sample.png")}/>
-                        <div>
-                            <h2>Pikachu</h2>
-                        </div>
-                    </div>
-                )}
-                </Color>
-
-                <Color src={require("../images/samples/sample.png")} format="hex">
-                {({data, loading, error}) => (
-                    <div style={{backgroundColor: data}}>
-                        <img src={require("../images/samples/sample.png")}/>
-                        <div>
-                            <h2>Pikachu</h2>
-                        </div>
-                    </div>
-                )}
-                </Color>
-
-                <Color src={require("../images/samples/pikachu.png")} format="hex">
-                {({data, loading, error}) => (
-                    <div style={{backgroundColor: data}}>
-                        <img src={require("../images/samples/pikachu.png")}/>
-                        <div>
-                            <h2>Pikachu</h2>
-                        </div>
-                    </div>
-                )}
-                </Color>
-
-                <Color src={require("../images/samples/pikachu.png")} format="hex">
-                {({data, loading, error}) => (
-                    <div style={{backgroundColor: data}}>
-                        <img src={require("../images/samples/pikachu.png")}/>
-                        <div>
-                            <h2>Pikachu</h2>
-                        </div>
-                    </div>
-                )}
-                </Color>
+                    )}
+                    </Color>
+                ))}
             </HomePokemons>
 
             <h5>Acompanhe Pokémon nas redes sociais:</h5>
@@ -102,37 +76,49 @@ export default function Home(props){
                 <div>
                     <WebIcon style={{color: Colors.mainColors.blueLight, fontSize: 100}} />
                     <h5>Website oficial do Pokémon</h5>
-                    <button>Acessar</button>
+                    <a rel="website" href="https://www.pokemon.com/br/" target="_blank" >
+                        <button>Acessar</button>
+                    </a>
                 </div>
 
                 <div>
                     <YoutubeIcon color={Colors.mainColors.blueLight} fontSize="100px"/>
                     <h5>Canal oficial do Pokémon no Youtube</h5>
-                    <button>Acessar</button>
+                    <a rel="website" href="https://www.youtube.com/channel/UCFctpiB_Hnlk3ejWfHqSm6Q" target="_blank" >
+                        <button>Acessar</button>
+                    </a>
                 </div>
 
                 <div>
                     <FacebookIcon color={Colors.mainColors.blueLight} fontSize="100px"/>
                     <h5>Facebook oficial do Pokémon</h5>
-                    <button>Acessar</button>
+                    <a rel="website" href="https://pt-br.facebook.com/Pokemon/" target="_blank" >
+                        <button>Acessar</button>
+                    </a>
                 </div>
 
                 <div>
                     <TwitterIcon color={Colors.mainColors.blueLight} fontSize="100px"/>
                     <h5>Twitter oficial do Pokémon</h5>
-                    <button>Acessar</button>
+                    <a rel="website" href="https://twitter.com/pokemon" target="_blank" >
+                        <button>Acessar</button>
+                    </a>
                 </div>
 
                 <div>
                     <InstagranIcon color={Colors.mainColors.blueLight} fontSize="100px"/>
                     <h5>Instagran oficial do Pokémon</h5>
-                    <button>Acessar</button>
+                    <a rel="website" href="https://www.instagram.com/pokemon/?hl=pt-br" target="_blank" >
+                        <button>Acessar</button>
+                    </a>
                 </div>
 
                 <div>
                     <StoreIcon style={{color: Colors.mainColors.blueLight, fontSize: 100}} />
                     <h5>Loja virtual oficial do Pokémon</h5>
-                    <button>Acessar</button>
+                    <a rel="website" href="https://www.pokemoncenter.com/" target="_blank" >
+                        <button>Acessar</button>
+                    </a>
                 </div>
                 
             </HomeSocial>
