@@ -253,8 +253,10 @@ export const HomePokemons = styled.div `
             transition: 0.2s;
         }
         div{
+            margin: 0;
             justify-content: center;
             align-items: center;
+            height: 20%;
             background-color: ${Colors.mainColors.blueStrong};
             h2{
                 font-size: 1.4em;

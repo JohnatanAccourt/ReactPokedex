@@ -59,8 +59,8 @@ export default function Home(props){
                 {data.map(index => (
                     <Color src={require("../images/samples/pikachu.png")} format="hex">
                     {({data, loading, error}) => (
-                        <div style={{backgroundColor: data }}>
-                            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${index.url.split('/')[6]}.svg`} alt="pokemon" />
+                        <div key={index.url.split('/')[6]} style={{backgroundColor: data }}>
+                            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index.url.split('/')[6]}.png`} alt="pokemon" />
                             <div>
                                 <h2>{index.name}</h2>
                             </div>

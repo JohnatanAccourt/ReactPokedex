@@ -45,23 +45,24 @@ export const PokemonsContainer = styled.div `
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;    
+            flex-direction: column;
+            background: ${Colors.mainColors.yellow};
             height: 38vh;
             width: 200px;
-            margin: 2px;
+            margin: 2px; 
             img{
                 padding: 5px 0px 5px 0px;
                 height: 80%;
                 width: 90%;
-                transition: 0.5s;
+                cursor: pointer;
             }
-            img:hover {
+            /* img:hover {
                 filter: drop-shadow(7px 7px 0 rgba(0, 0, 0, 0.2));
                 height: 82%;
                 width: 92%;
                 transition: 0.2s;
                 cursor: pointer;
-            }
+            } */
             div{
                 margin: 0;
                 justify-content: center;
@@ -77,6 +78,38 @@ export const PokemonsContainer = styled.div `
                 }
             }
         }
+    }
+    .footer{
+        /* position: relative; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        height: 7vh;
+        background-color: ${Colors.mainColors.blueMid};
+        p{
+            font-size: 1em;
+            color: white;
+            font-family: ${font};
+            font-weight: ${fontMedium};
+        }
+        button{
+            border: none;
+            outline: none;
+            font-family: ${font};
+            font-weight: ${fontMedium};
+            background-color: transparent;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    }
+    .teste{
+        position: absolute;
+        width: 100%;
     }
 
     aside{

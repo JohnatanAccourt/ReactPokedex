@@ -5,6 +5,8 @@ import axios from 'axios';
 
 import GraphicIcon from '@material-ui/icons/GraphicEq';
 import FlashIcon from '@material-ui/icons/FlashOn';
+import ChevronLeft from '@material-ui/icons/ChevronLeft';
+import ChevronRight from '@material-ui/icons/ChevronRight';
 import PawIcon from 'react-ionicons/lib/MdPaw';
 import SchoolIcon from 'react-ionicons/lib/MdSchool';
 
@@ -36,19 +38,22 @@ export default function Pokemons(props){
 
     const [bar, showBar] = useState('0%');
 
+    const [page, setPage] = useState('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=15');
+    const [prevURL, setPrevURL] = useState('');
+    const [nexURL, setNexURL] = useState('');
+
     async function loadData(){
-        axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=15')
+        axios.get(page)
         .then(function(res){
             setData(res.data.results)
-
+            setPrevURL(res.data.previous)
+            setNexURL(res.data.next)
         })
         .catch(function (error) {  console.log(error)  })
     }
     async function showPokemonData(id){
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
         .then(function(res){
-            console.log(res.data.weight)
-
             setName(res.data.name);
             setImgName(id);
 
@@ -67,8 +72,6 @@ export default function Pokemons(props){
             setHeight(res.data.height)
 
             showBar('100%')
-
-
         })
         .catch(function (error) {  console.log(error)  })
     }
@@ -81,16 +84,12 @@ export default function Pokemons(props){
         <PokemonsContainer>
             <section>
                 {data.map(index => (
-                    <Color key={index.url.split('/')[6]} src={require(`../images/samples/pikachu.png`)} format="hex">
-                    {({data, loading, error}) => (
-                        <div style={{backgroundColor: data, marginBottom: 10, marginTop: 10 }} onClick={() => showPokemonData(index.url.split('/')[6])}>
-                            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${index.url.split('/')[6]}.svg`} alt="pokemon"/>
-                            <div>
-                                <h2>{index.name}</h2>
-                            </div>
+                    <div key={index.url.split('/')[6]} style={{backgroundColor: data, marginBottom: 10, marginTop: 10 }} onClick={() => showPokemonData(index.url.split('/')[6])}>
+                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${index.url.split('/')[6]}.svg`} alt="pokemon"/>
+                        <div>
+                            <h2>{index.name}</h2>
                         </div>
-                    )}
-                    </Color>
+                    </div>
                 ))}
 
                 {/* Hacky to solve problem with flex wrap, alinging all elements to left */}
@@ -98,6 +97,24 @@ export default function Pokemons(props){
                 <div className="fixFlexWrap"></div>
                 <div className="fixFlexWrap"></div>
                 <div className="fixFlexWrap"></div>
+
+                <footer className="footer">
+                    <ChevronLeft style={{color: "#fff", fontSize: 35, alignSelf: 'center'} } onClick={() => [setPage(prevURL), loadData()]} />
+                        {/* <button onClick={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=15`)}>1</button>
+                        <button onClick={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=15&limit=15`)}>15</button>
+                        <button onClick={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=30&limit=15`)}>30</button>
+                        <button onClick={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=45&limit=15`)}>45</button>
+                        <button onClick={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=60&limit=15`)}>60</button>
+                        <button onClick={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=75&limit=15`)}>75</button>
+                        <button onClick={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=90&limit=15`)}>90</button>
+                        <button onClick={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=105&limit=15`)}>105</button>
+                        <button onClick={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=120&limit=15`)}>120</button>
+                        <button onClick={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=135&limit=15`)}>135</button>
+                        <button onClick={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=150&limit=15`)}>150</button>
+                        <button onClick={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=180limit=15`)}>180</button>
+                        <button onClick={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=1000&limit=15`)}>1000</button> */}
+                    <ChevronRight style={{color: "#fff", fontSize: 35, alignSelf: 'center'}} onClick={() => [setPage(nexURL), loadData()]} />
+                </footer>
                 
             </section>
 
