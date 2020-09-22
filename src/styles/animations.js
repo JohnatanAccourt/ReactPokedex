@@ -37,6 +37,12 @@ export const fillSlowly = keyframes `
 ` 
 
 
+export const delay = keyframes `
+    from { opacity: 0; }
+    to { opacity: 1; }
+`
+
+
 
 
  

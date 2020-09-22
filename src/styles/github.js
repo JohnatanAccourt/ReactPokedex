@@ -24,11 +24,10 @@ export const GithubContainer = styled.div `
         overflow-x: hidden;
         height: 100vh;
         width: 75%;
+        padding: 0% 3% 0% 3%;
         background: ${Colors.mainColors.blueMid};
         animation: ${toBlueMid} 1s 0s forwards;
         h2{
-            width: 90%;
-            margin: auto;
             text-align: left;
             font-size: 3em;
             color: white;
@@ -40,8 +39,6 @@ export const GithubContainer = styled.div `
             animation: ${textWrap} 3s 0s forwards;
         }
         h3, p{
-            width: 90%;
-            margin: auto;
             text-align: left;
             font-size: 3em;
             color: white;
@@ -57,6 +54,28 @@ export const GithubContainer = styled.div `
         p{
             font-size: 1em;
             font-weight: ${fontLight};
+        }
+        button{
+            width: 100%;
+            background-color: ${Colors.mainColors.blueStrong};
+            height: 40px;
+            padding: 0;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.5s;
+            a{
+                text-decoration: none;
+                font-size: 1.2em;
+                color: white;
+                font-family: ${font};
+                font-weight: ${fontBold};
+            }
+            :hover{
+                background-color: ${Colors.mainColors.green};
+                border-radius: 10px;
+                transition: 0.5s;
+            }
         }
     }
     section{

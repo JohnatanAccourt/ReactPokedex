@@ -10,8 +10,8 @@ import { Container } from './styles/grid';
 
 function App(props) {
     const [home, setHome] = useState(false);
-    const [pokemon, setPokemon] = useState(true);
-    const [github, setGitHub] = useState(false);
+    const [pokemon, setPokemon] = useState(false);
+    const [github, setGitHub] = useState(true);
 
     return (
         <Container>

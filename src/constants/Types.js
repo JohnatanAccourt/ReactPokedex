@@ -1,5 +1,3 @@
-import { dark } from "@material-ui/core/styles/createPalette"
-
 const types = {
     bug: require('../images/types/bug.svg'),
     dark: require('../images/types/dark.svg'),

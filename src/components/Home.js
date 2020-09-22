@@ -57,9 +57,9 @@ export default function Home(props){
 
             <HomePokemons>
                 {data.map(index => (
-                    <Color src={require("../images/samples/pikachu.png")} format="hex">
+                    <Color key={index.url.split('/')[6]} src={require("../images/samples/pikachu.png")} format="hex">
                     {({data, loading, error}) => (
-                        <div key={index.url.split('/')[6]} style={{backgroundColor: data }}>
+                        <div style={{backgroundColor: data }}>
                             <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index.url.split('/')[6]}.png`} alt="pokemon" />
                             <div>
                                 <h2>{index.name}</h2>
@@ -76,7 +76,7 @@ export default function Home(props){
                 <div>
                     <WebIcon style={{color: Colors.mainColors.blueLight, fontSize: 100}} />
                     <h5>Website oficial do Pokémon</h5>
-                    <a rel="website" href="https://www.pokemon.com/br/" target="_blank" >
+                    <a rel="noopener noreferrer" href="https://www.pokemon.com/br/" target="_blank" >
                         <button>Acessar</button>
                     </a>
                 </div>
@@ -84,7 +84,7 @@ export default function Home(props){
                 <div>
                     <YoutubeIcon color={Colors.mainColors.blueLight} fontSize="100px"/>
                     <h5>Canal oficial do Pokémon no Youtube</h5>
-                    <a rel="website" href="https://www.youtube.com/channel/UCFctpiB_Hnlk3ejWfHqSm6Q" target="_blank" >
+                    <a rel="noopener noreferrer" href="https://www.youtube.com/channel/UCFctpiB_Hnlk3ejWfHqSm6Q" target="_blank" >
                         <button>Acessar</button>
                     </a>
                 </div>
@@ -92,7 +92,7 @@ export default function Home(props){
                 <div>
                     <FacebookIcon color={Colors.mainColors.blueLight} fontSize="100px"/>
                     <h5>Facebook oficial do Pokémon</h5>
-                    <a rel="website" href="https://pt-br.facebook.com/Pokemon/" target="_blank" >
+                    <a rel="noopener noreferrer" href="https://pt-br.facebook.com/Pokemon/" target="_blank" >
                         <button>Acessar</button>
                     </a>
                 </div>
@@ -100,7 +100,7 @@ export default function Home(props){
                 <div>
                     <TwitterIcon color={Colors.mainColors.blueLight} fontSize="100px"/>
                     <h5>Twitter oficial do Pokémon</h5>
-                    <a rel="website" href="https://twitter.com/pokemon" target="_blank" >
+                    <a rel="noopener noreferrer" href="https://twitter.com/pokemon" target="_blank" >
                         <button>Acessar</button>
                     </a>
                 </div>
@@ -108,7 +108,7 @@ export default function Home(props){
                 <div>
                     <InstagranIcon color={Colors.mainColors.blueLight} fontSize="100px"/>
                     <h5>Instagran oficial do Pokémon</h5>
-                    <a rel="website" href="https://www.instagram.com/pokemon/?hl=pt-br" target="_blank" >
+                    <a rel="noopener noreferrer" href="https://www.instagram.com/pokemon/?hl=pt-br" target="_blank" >
                         <button>Acessar</button>
                     </a>
                 </div>
@@ -116,14 +116,12 @@ export default function Home(props){
                 <div>
                     <StoreIcon style={{color: Colors.mainColors.blueLight, fontSize: 100}} />
                     <h5>Loja virtual oficial do Pokémon</h5>
-                    <a rel="website" href="https://www.pokemoncenter.com/" target="_blank" >
+                    <a rel="noopener noreferrer" href="https://www.pokemoncenter.com/" target="_blank" >
                         <button>Acessar</button>
                     </a>
                 </div>
                 
             </HomeSocial>
-
-            <h6>Espero que tenha uma boa experiência com esse pequeno projeto 😁.</h6>
         </HomeContainer>
     )
 }

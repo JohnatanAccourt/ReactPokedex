@@ -12,7 +12,7 @@ export default function SideBar(props){
                     title="Nikita Golubev"
                     alt="pokeball"
                 >
-                    <img src={require('../images/logos/pokemon.png')} />
+                    <img src={require('../images/logos/pokemon.png')} alt="logo pokemon"/>
                 </a>
                     <h1>Pokedex</h1>
             </div>

@@ -145,6 +145,7 @@ export const HomeSocial = styled.div `
     flex-direction: row;
     width: 96%;
     margin: auto;
+    margin-bottom: 20px;
     div{
         display: flex;  
         flex-direction: column;

@@ -4,7 +4,8 @@ import Colors from '../constants/Colors';
 import { 
     toBlueMid,
     toBlueLight,
-    fillSlowly
+    fillSlowly,
+    delay
 } from './animations';
 
 const font = 'Roboto';
@@ -12,6 +13,72 @@ const fontLight = '400';
 const fontMedium = '500'; 
 const fontBold = '700'; 
 
+export const LoadingContainer = styled.div `
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    img{
+        margin-right: 10%;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        p{
+            font-size: 2em;
+            text-align: center;
+            color: white;
+            font-family: ${font};
+            font-weight: ${fontBold};
+            margin-top: 10px;
+            margin-bottom: 10px;
+            &:nth-child(1){
+                animation: ${delay} 0.7s 0.5s normal infinite;
+            }
+            &:nth-child(2){
+                animation: ${delay} 0.7s 1s normal infinite;
+            }
+            &:nth-child(3){
+                animation: ${delay} 0.7s 1.5s normal infinite;
+            }
+            &:nth-child(4){
+                animation: ${delay} 0.7s 2s normal infinite;
+            }
+            &:nth-child(5){
+                animation: ${delay} 0.7s 2.5s normal infinite;
+            }
+            &:nth-child(6){
+                animation: ${delay} 0.7s 3s normal infinite;
+            }
+            &:nth-child(7){
+                animation: ${delay} 0.7s 3.5s normal infinite;
+            }
+            &:nth-child(8){
+                animation: ${delay} 0.7s 4s normal infinite;
+            }
+            &:nth-child(9){
+                animation: ${delay} 0.7s 4.5s normal infinite;
+            }
+            &:nth-child(10){
+                animation: ${delay} 0.7s 5s normal infinite;
+            }
+            &:nth-child(11){
+                animation: ${delay} 0.7s 5.5s normal infinite;
+            }
+            &:nth-child(12){
+                animation: ${delay} 0.7s 6s normal infinite;
+            }
+            &:nth-child(13){
+                animation: ${delay} 0.7s 6.5s normal infinite;
+            }
+        }
+    }
+`
 export const PokemonsContainer = styled.div `
     height: 100vh;
     width: 100%;
@@ -56,13 +123,13 @@ export const PokemonsContainer = styled.div `
                 width: 90%;
                 cursor: pointer;
             }
-            /* img:hover {
+            img:hover {
                 filter: drop-shadow(7px 7px 0 rgba(0, 0, 0, 0.2));
                 height: 82%;
                 width: 92%;
                 transition: 0.2s;
                 cursor: pointer;
-            } */
+            }
             div{
                 margin: 0;
                 justify-content: center;
@@ -88,6 +155,9 @@ export const PokemonsContainer = styled.div `
         max-width: 100%;
         height: 7vh;
         background-color: ${Colors.mainColors.blueMid};
+        *:hover{
+            font-size: 1.2em;
+        }
         p{
             font-size: 1em;
             color: white;
@@ -114,7 +184,7 @@ export const PokemonsContainer = styled.div `
 
     aside{
         height: 100vh;
-        /* width: 0%; */
+        max-width: 250px;
         background: ${Colors.mainColors.blueLight};
         display: flex;
         align-items: center;
