@@ -77,6 +77,10 @@ export const GithubContainer = styled.div `
                 transition: 0.5s;
             }
         }
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* make scrollbar transparent */
+        }
     }
     section{
         height: 100vh;
@@ -101,17 +105,24 @@ export const GithubContainer = styled.div `
         display: flex;
         align-items: center;
         flex-direction: column;
-        animation: ${toBlueLight} 1s 0s forwards;
-        div{
+        animation: ${toBlueMid} 1s 0s forwards;
+        overflow-x: scroll;
+        overflow-y: none;
+        overflow-x: hidden;
+        .imgPerson{
             width: 200px;
-            height: 200px;
+            height: 400px;
             border-radius: 100%;
             background-image: url(${img});
             background-size: cover;
             background-position: center;
-            margin-top: 10px;
+            margin-top: 5px;
+            border-style: solid;
+            border-width: 10px;
+            border-color: ${Colors.mainColors.blueLight};
         }
         h1{
+            width: 50%;
             text-align: center;
             font-size: 1.9em;
             color: white;
@@ -119,6 +130,24 @@ export const GithubContainer = styled.div `
             font-weight: ${fontBold};
             margin-top: 10px;
             margin-bottom: 10px;
+        }
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* make scrollbar transparent */
+        }
+        .wrapperLogos{
+            width: 95%;
+            background-color: ${Colors.mainColors.blueLight};
+            animation: ${toBlueLight} 1s 0s forwards;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            img{
+                margin-top: 30px;
+                width: 100px;
+                height: 100px;
+            }
         }
     }
 `

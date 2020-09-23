@@ -84,6 +84,18 @@ export const PokemonsContainer = styled.div `
     width: 100%;
     display: flex;
     flex-direction: row;
+    .tip4user{
+        position: absolute;
+        top: 0;
+        background-color: ${Colors.mainColors.blueStrong};
+        padding: 1%;    
+        z-index: 100;
+
+        font-size: 1em;
+        color: white;
+        font-family: ${font};
+        font-weight: ${fontMedium};
+    }
     section{
         display: flex;
         flex-direction: row;  

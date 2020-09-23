@@ -60,8 +60,25 @@ export default function Github(props){
             </section>
 
             <aside>
-                <div></div>
+                <div className="imgPerson"></div>
                 <h1>Johnatan Accourt</h1>
+                <div className="wrapperLogos">
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/javascript.svg" alt="javascript"/>
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/html5.svg" alt="html5"/>
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/css3.svg" alt="css3"/>
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/sass.svg" alt="sass"/>
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/bootstrap.svg" alt="bootstrap"/>
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/jquery.svg" alt="jquery"/>
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/react.svg" alt="react"/>
+                    <img src="https://reactnavigation.org/img/spiro.svg" alt="react navigation"/>
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/npm.svg" alt="npm"/>
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/yarn.svg" alt="yarn"/>
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/webpack.svg" alt="webpack"/>
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/git.svg" alt="git"/>
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/github-icon.svg" alt="github"/>
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/nodejs.svg" alt="nodejs"/>
+                    <img src="https://raw.githubusercontent.com/prplx/svg-logos/5585531d45d294869c4eaab4d7cf2e9c167710a9/svg/express.svg" alt="express"/>
+                </div>
             </aside>
         </GithubContainer>
     )

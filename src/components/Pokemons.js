@@ -8,7 +8,7 @@ import ChevronRight from '@material-ui/icons/ChevronRight';
 import PawIcon from 'react-ionicons/lib/MdPaw';
 
 import Colors from '../constants/Colors';
-import types from '../constants/Types';
+import types from '../constants/Types'; 
 
 import Loading from '../components/Loading';
 
@@ -37,6 +37,7 @@ export default function Pokemons(props){
     const [height, setHeight] = useState([]);
 
     const [bar, showBar] = useState('0%');
+    const [tip, setTip] = useState('block');
 
     const [page, setPage] = useState('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=15');
     const [prevURL, setPrevURL] = useState('');
@@ -63,6 +64,7 @@ export default function Pokemons(props){
             setHeight(res.data.height);
 
             showBar('100%');
+            setTip('none')
         })
         .catch(function (error) {  console.log(error)  })
     }
@@ -95,6 +97,7 @@ export default function Pokemons(props){
                 <Loading />
                 :
                 <section>
+                    <p className="tip4user" style={{display: tip}}>Clique em algum pokemon</p>
                     {data.map(index => (
                         <div key={index.url.split('/')[6]} style={{backgroundColor: data, marginBottom: 10, marginTop: 10}} onClick={() => showPokemonData(index.url.split('/')[6])}>
                             <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${index.url.split('/')[6]}.svg`} alt="pokemon"/>
