@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import SideBar from './components/SideBar';
-import Home from './components/Home';
-import Pokemons from './components/Pokemons';
-import Github from './components/Github';
+import Home from './tabs/Home';
+import Pokemons from './tabs/Pokemons';
+import Github from './tabs/Github';
 
 import './styles/reset.css';
 import { Container } from './styles/grid';
