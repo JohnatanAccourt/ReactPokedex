@@ -13,7 +13,7 @@ export default {
         specialAttack: '#770000',
         defense: '#9E01AF',
         specialDefense: '#6D0078',
-        speed: '#01326A',
+        speed: '#A8C1DE',
     }
 } 
     

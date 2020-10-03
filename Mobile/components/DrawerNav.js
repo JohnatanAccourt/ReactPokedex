@@ -31,19 +31,20 @@ export default function DrawerNav({ navigation }) {
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: `${Colors.mainColors.blueLight}`
+        backgroundColor: `${Colors.mainColors.blueStrong}`
     },
     drawerImage:{
         width: 200,
         height: 200,
         alignSelf: 'center',
-        marginTop: 10
+        marginTop: 40
     },
     drawerText:{
         fontSize: 32,
         color: 'white',
         textAlign: "center",
-        marginVertical: 10
+        marginTop: 15,
+        marginBottom: 40
     }
 
 

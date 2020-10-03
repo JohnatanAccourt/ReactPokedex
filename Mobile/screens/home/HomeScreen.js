@@ -37,6 +37,26 @@ export default function HomeScreen({ navigation }) {
         })
         .catch(function (error) {  console.log(error)  })
     }
+    
+    function navigateToPokemonInfo(id){
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+        .then(function(res){
+            navigation.navigate('Pokemon', {
+                id: id,
+                name: res.data.name,
+                life: res.data.stats[0].base_stat,
+                attack: res.data.stats[1].base_stat,
+                specialAttack: res.data.stats[2].base_stat,
+                defense: res.data.stats[3].base_stat,
+                specialDefense: res.data.stats[4].base_stat,
+                speed: res.data.stats[5].base_stat,
+                type: res.data.types[0].type.name,
+                moves: res.data.moves
+            })
+            
+        })
+        .catch(function (error) {  console.log(error)  })
+    }
 
     useEffect(() => {
         loadData();
@@ -67,7 +87,7 @@ export default function HomeScreen({ navigation }) {
                     <View style={styles.pokemonContainer}>
                         <View style={styles.pokemonCard}>
                             <View style={styles.pokemonImageWrapper}>
-                                <TouchableOpacity activeOpacity={0.6} >
+                                <TouchableOpacity activeOpacity={0.6} onPress={() => navigateToPokemonInfo(pokemon.url.split('/')[6])} >
                                     <Image style={styles.pokemonImg} source={{uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.url.split('/')[6]}.png`}} />  
                                 </TouchableOpacity>
                             </View>

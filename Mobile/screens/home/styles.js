@@ -34,6 +34,7 @@ export default StyleSheet.create({
         width: '90%',
         height: 250,
         backgroundColor: `${Colors.mainColors.yellow}`,
+        borderRadius: 20,
         marginBottom: 10
     },
     pokemonImageWrapper:{
@@ -51,7 +52,9 @@ export default StyleSheet.create({
         alignItems: 'center',
         backgroundColor: `${Colors.mainColors.blueStrong}`,
         width: '100%',
-        height: '15%'
+        height: '15%',
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20
     },
     pokemonText:{
         fontSize: 20,
