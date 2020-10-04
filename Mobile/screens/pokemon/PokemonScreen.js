@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { View, Text, Image, ScrollView, Animated, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, ScrollView, Animated, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -19,7 +19,7 @@ export default function PokemonScreen({ navigation }) {
     const specialDefense = route.params.specialDefense;
     const speed = route.params.speed;
     const type = route.params.type;
-    const moves = route.params.moves;
+    // const moves = route.params.moves;
 
     const ScrollPosition = useRef(new Animated.Value(0)).current
 
@@ -65,12 +65,6 @@ export default function PokemonScreen({ navigation }) {
                     <Text style={styles.pokemonTypeText}>{type}</Text> 
 
                     <View style={styles.innerContent}>
-                        <Text style={styles.textTitle}>Habilidades:</Text>
-                        <View style={styles.wrapperContentText}>
-                            {moves.map((index, count) => {
-                                return <Text style={styles.contentText} key={count}>{index.move.name}</Text>
-                            })}
-                        </View>
                     </View>
                 </View>
             </View>

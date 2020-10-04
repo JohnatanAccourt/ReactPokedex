@@ -24,7 +24,7 @@ export default StyleSheet.create({
     },
 
     pokemons:{
-        width: '100%'
+        flex: 1,
     },
     pokemonContainer:{
         width: '53%',
@@ -61,13 +61,13 @@ export default StyleSheet.create({
         color: '#fff'
     },
     emptyContainer:{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 100
+        height: '100%',
+        justifyContent: 'center'
     },
     emptyGif:{
+        alignSelf: "center",
         width: 280,
-        height: 200
+        height: 200,
+        marginTop: -100
     }
 })

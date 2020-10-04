@@ -47,7 +47,9 @@ export default function Home(props){
                 <div>
                     <h1>Pokedex APP</h1>
                     <h3>Baixe o app do ReactPokedex! com isso você pode ver a qualquer momento todos os pokémons.</h3>
-                    <button>Download APP</button>
+                    <a rel="noopener noreferrer" href="https://drive.google.com/file/d/1wv67W7U_uZDe2KIcZZ04N--EC0efQ8gb/view" target="_blank" >
+                        <button>Download APP</button>
+                    </a>
                 </div>
             </HomeBanner>
 

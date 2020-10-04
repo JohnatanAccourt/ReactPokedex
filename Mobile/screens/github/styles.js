@@ -9,6 +9,7 @@ export default StyleSheet.create({
     wrapperSection:{
         width: '100%',
         alignItems: 'center',
+        justifyContent: "center",
         flexDirection: 'row',
         marginTop: 5
     },

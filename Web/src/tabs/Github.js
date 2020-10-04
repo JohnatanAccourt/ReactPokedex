@@ -17,7 +17,7 @@ export default function Github(props){
                     Olá, sou Johnatan
                 </h2>
                 <h3>
-                    Tenho 20 anos sou Front-End Developer, criei este projeto com o intuito de extender meu portifolio para mostrar meu trabalho através de redes sociais tais como o linkedin.
+                    Sou Front-End Developer e criei este projeto com o intuito de extender meu portifolio para mostrar meu trabalho através de redes sociais tais como o linkedin.
                 </h3>
                 <p>
                     Esse pequeno projeto consiste em trabalhar com o React utilizando o máximo dos conhecimentos adquiridos através de documentações e vídeos, ou seja, hooks, estados, componentes e props. E também utilizar conhecimentos prévios que já possuo.

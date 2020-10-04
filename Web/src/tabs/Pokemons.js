@@ -99,7 +99,8 @@ export default function Pokemons(props){
                     <p className="tip4user" style={{display: tip}}>Clique em algum pokemon</p>
                     {data.map(index => (
                         <div key={index.url.split('/')[6]} style={{backgroundColor: data, marginBottom: 10, marginTop: 10}} onClick={() => showPokemonData(index.url.split('/')[6])}>
-                            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${index.url.split('/')[6]}.svg`} alt="pokemon"/>
+                            {/* <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${index.url.split('/')[6]}.svg`} alt="pokemon"/> */}
+                            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index.url.split('/')[6]}.png`} alt="pokemon" />
                             <div>
                                 <h2>{index.name}</h2>
                             </div>
@@ -114,7 +115,6 @@ export default function Pokemons(props){
                     <footer className="footer">
                         <ChevronLeft style={{color: "#fff", fontSize: 35, alignSelf: 'center', cursor: 'pointer'} } onClick={() => setPage(prevURL)} />
                             <Pagination page={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=15`)} numberPage='1' />
-                            <Pagination page={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=15`)} numberPage='1'/>
                             <Pagination page={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=15&limit=15`)} numberPage='15'/>
                             <Pagination page={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=30&limit=15`)} numberPage='30'/>
                             <Pagination page={() => setPage(`https://pokeapi.co/api/v2/pokemon/?offset=45&limit=15`)} numberPage='45'/>

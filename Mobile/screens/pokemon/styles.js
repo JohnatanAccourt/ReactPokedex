@@ -127,7 +127,7 @@ export default StyleSheet.create({
     },
     pokemonTypeText:{
         color: '#fff',
-        fontSize: 30,
+        fontSize: 40,
         marginVertical: 10,
         fontWeight: 'bold'
     },

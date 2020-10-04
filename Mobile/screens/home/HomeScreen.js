@@ -70,6 +70,7 @@ export default function HomeScreen({ navigation }) {
                 data={data}
                 style={styles.pokemons}
                 onEndReachedThreshold={0.6}
+                contentContainerStyle={{ flexGrow: 1 }}
                 keyExtractor={pokemon => String(pokemon.name)}
                 ListEmptyComponent={ListEmpty}
                 onEndReached={loadMoreData}
