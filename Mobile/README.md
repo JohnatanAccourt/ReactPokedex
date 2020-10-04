@@ -1,14 +1,16 @@
-# React Pokedex Versão Web:
+# React Pokedex Versão APP:
 
 Essa é a versão Mobile desse projeto, ele é bem reduzido comparado com a versão Web tanto em tamanho e também no conteúdo, a idéia é justamente ser uma versão pocket da web.
 
 ## Algumas imagens do projeto:
 
-![splash](https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Web/src/images/doc/home.PNG)
-![loading](https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Web/src/images/doc/loading.PNG)
-![drawer](https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Web/src/images/doc/pokemons.PNG)
-![home](https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Web/src/images/doc/pokemons.PNG)
-![pokemon](https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Web/src/images/doc/pokemons2.PNG)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Mobile/assets/docs/splash.png" />
+  <img src="https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Mobile/assets/docs/loading.png" />
+  <img src="https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Mobile/assets/docs/drawe.png" />
+  <img src="https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Mobile/assets/docs/home.png" />
+  <img src="https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Mobile/assets/docs/pokemon.png" />
+</p>
 
 ## Instalação:
 
