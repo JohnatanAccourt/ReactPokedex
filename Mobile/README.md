@@ -5,10 +5,10 @@ Essa é a versão Mobile desse projeto, ele é bem reduzido comparado com a vers
 ## Algumas imagens do projeto:
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Mobile/assets/docs/home.png" />
   <img src="https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Mobile/assets/docs/splash.png" />
   <img src="https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Mobile/assets/docs/loading.png" />
-  <img src="https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Mobile/assets/docs/drawe.png" />
-  <img src="https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Mobile/assets/docs/home.png" />
+  <img src="https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Mobile/assets/docs/drawer.png" />
   <img src="https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Mobile/assets/docs/pokemon.png" />
 </p>
 
