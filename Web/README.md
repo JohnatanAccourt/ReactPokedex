@@ -1,12 +1,10 @@
 # React Pokedex Versão Web:
 
-## Introdução:
-
-Essa é a versão Web desse projeto, como não tenho tanto conhecimento sobre pokemons tentei trazer o máximo de informações que a api fornece.
+Essa é a versão Web desse projeto, nesta versão possui mais informações sobre os pokemons e também possui uma home um pouco mais completa do que a versão mobile.
 
 ## Algumas imagens do projeto:
 
-![home](./src/images/doc/home.png)
+![home](https://github.com/JohnatanAccourt/ReactPokedex/blob/master/Web/src/images/doc/home.png)
 </br>
 </br>
 ![loading](./src/images/doc/loading.png)
