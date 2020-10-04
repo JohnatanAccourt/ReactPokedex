@@ -9,19 +9,25 @@ Essa é a versão Web desse projeto, essa versão possui mais informações sobr
 ![imagem](https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Web/src/images/doc/pokemons.PNG)
 ![imagem](https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Web/src/images/doc/pokemons2.PNG)
 
-## instalação:
+## Instalação:
 
-**Em seu terminal de preferência:**
-</br>
-Para instalar as dependências desse projeto:
+**Em seu terminal de preferência**
+navegue até a pasta do projeto e instale as dependências do projeto:
 
 ```
 npm install
 ```
-
-Após navegar até a pasta desse projeto apenas execute:
+Depois é só dar start no server usando:
 
 ```
 npm start
 ```
+
+## Melhorias que podem ser Feitas:
+
+* Api não possui imagem para todos os pokemons **(os mais recentes)** no objeto dream_world do sprites, mas ainda não experimentei os outros objetos para verificar se possuem imagem.
+
+* Torna-lo responsivo
+* Pesquisa por pokemon através de uma searchBar
+
 
