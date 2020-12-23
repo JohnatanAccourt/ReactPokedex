@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import ChevronLeft from '@material-ui/icons/ChevronLeft';
 import ChevronRight from '@material-ui/icons/ChevronRight';
+import Menu from '@material-ui/icons/Menu';
 
 import types from '../constants/Types'; 
 
@@ -62,7 +63,7 @@ export default function Pokemons(props){
             setWeight(res.data.weight);
             setHeight(res.data.height);
 
-            showBar('100%');
+            showBar('300%');
             setTip('none')
         })
         .catch(function (error) {  console.log(error)  })
@@ -92,10 +93,15 @@ export default function Pokemons(props){
 
     return(
         <PokemonsContainer>
-            {loading ?
+            {loading ? 
                 <Loading />
                 :
                 <section>
+                    <button className="mobileBTN" onClick={props.menuMobile}>
+                        <span>
+                            <Menu style={{color: '#fff', fontSize: '3rem'}} />
+                        </span>
+                    </button>
                     <p className="tip4user" style={{display: tip}}>Clique em algum pokemon</p>
                     {data.map(index => (
                         <div key={index.url.split('/')[6]} style={{backgroundColor: data, marginBottom: 10, marginTop: 10}} onClick={() => showPokemonData(index.url.split('/')[6])}>

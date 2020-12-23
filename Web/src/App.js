@@ -4,32 +4,45 @@ import SideBar from './components/SideBar';
 import Home from './tabs/Home';
 import Pokemons from './tabs/Pokemons';
 import Github from './tabs/Github';
+import Modal from './components/Modal';
 
 import './styles/reset.css';
 import { Container } from './styles/grid';
 
-function App(props) {
-    const [home, setHome] = useState(true);
-    const [pokemon, setPokemon] = useState(false);
-    const [github, setGitHub] = useState(false);
+function App() {
+    const [page, setPage] = useState('home');
+    const [menu, setMenu] = useState(false);
+
+    const onChangeMenu = () => { setMenu(!menu) }
 
     return (
         <Container>
             <div className="sideBar">
                 <SideBar 
-                    onClickHome={() => [setHome(true), setPokemon(false), setGitHub(false)] } 
-                    onClickPokemon={() => [setPokemon(true), setHome(false), setGitHub(false)]} 
-                    onClickGitHub={() => [setGitHub(true), setPokemon(false), setHome(false)]}
+                    onClickHome={() => setPage('home')} 
+                    onClickPokemon={() => setPage('pokemon')} 
+                    onClickGitHub={() => setPage('github')}
                 />
             </div>
             <div className="mainGrid">
-                { home ? 
-                    <Home onClickPokemon={() => [setPokemon(true), setHome(false), setGitHub(false)]}/> 
-                : pokemon ? 
-                    <Pokemons /> 
-                : github ? 
-                    <Github /> 
-                :   <Home /> }
+                { menu ? 
+                    <Modal
+                        onClickHome={() => [setPage('home'), setMenu(!menu)]} 
+                        onClickPokemon={() => [setPage('pokemon'), setMenu(!menu)]} 
+                        onClickGitHub={() => [setPage('github'), setMenu(!menu)]}
+                        onClickCloseModal={() => setMenu(!menu)}
+                    />
+                    :
+                    <></>
+                }
+                { page === 'home' ? 
+                    <Home menuMobile={onChangeMenu} onClickPokemon={() => setPage('pokemon')} /> 
+                : page === 'pokemon' ? 
+                    <Pokemons menuMobile={onChangeMenu} /> 
+                : page === 'github' ? 
+                    <Github menuMobile={onChangeMenu} /> 
+                :   <Home menuMobile={onChangeMenu} /> }
+                
             </div>
         </Container>
     );

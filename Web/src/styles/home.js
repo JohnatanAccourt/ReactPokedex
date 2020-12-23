@@ -20,6 +20,31 @@ export const HomeContainer = styled.div `
     overflow-y: none;
     overflow-x: hidden;
     animation: ${toBlueMid} 1.5s 0s forwards;
+    .mobileBTN{
+        display: none;
+        position: fixed;
+        top: 1%;
+        left: 1%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        z-index: 10000;
+        @media(max-width: 1000px){
+            display: block;
+        }
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 80px;
+            background: ${Colors.mainColors.blueStrong};
+            
+        }
+        
+    }
     h5{
         width: 95%;
         margin: auto;
@@ -78,10 +103,15 @@ export const HomeBanner = styled.div `
     img{
         display: block;
         position: relative;
-        height: 100vh;
-        width: 540px;
-        top: -0px;
+        height: 200%;
+        max-width: 60%;
+        top: 0px;
         animation: ${imgBannerExtend} 3s 0.5s forwards;
+        @media(max-width: 640px){
+            left: -6%;
+            height: 170%;
+            max-width: 70%;
+        }
     }
     div{
         width: 60%;
@@ -91,6 +121,11 @@ export const HomeBanner = styled.div `
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media(max-width: 640px){
+            width: 30%;
+            padding-top: 20px;
+            padding-left: 0px;
+        }
         h1{
             opacity: 0;
             position: relative;
@@ -133,6 +168,11 @@ export const HomeBanner = styled.div `
             align-self: center;
             cursor: pointer;
             animation: ${textSlide} 3s 0.5s forwards;
+            @media(max-width: 640px){
+                width: 150px;
+                height: 25px;
+                font-size: 0.8em;
+            }
         }
 
     }
@@ -141,8 +181,9 @@ export const HomeBanner = styled.div `
     
 export const HomeSocial = styled.div `
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 96%;
     margin: auto;
     margin-bottom: 20px;
@@ -156,6 +197,7 @@ export const HomeSocial = styled.div `
         height: 200px;
         border-radius: 10px;
         margin-left: 1%;
+        margin-bottom: 2%;
     }
     a > button:hover {
         background-color: ${Colors.mainColors.green};
@@ -200,7 +242,7 @@ export const HomeBtn = styled.div `
     align-items: center;
     margin-top: 10px;
     h2{
-        width: 20%;
+        width: 25%;
         height: 70%;
         line-height: 25px;
         text-align: center;
@@ -229,28 +271,27 @@ export const HomePokemons = styled.div `
     display: flex;
     justify-content: space-between;
     position: relative;
-    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: row;  
     width: 95%;
-    height: 38vh;
-    margin: auto;
-    margin-top: 10px;
+    margin: 40px auto;
     div{
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;    
-        height: 38vh;
+        flex-direction: column;
         width: 200px;
+        @media(max-width: 1270px){
+            margin-bottom: 10%;
+        }
         img{
-            padding: 5px 0px 5px 0px;
-            height: 80%;
+            padding: 7% 4%;
+            height: 90%;
             width: 90%;
-            transition: 1s;
+            cursor: pointer;
         }
         img:hover {
             filter: drop-shadow(7px 7px 0 rgba(0, 0, 0, 0.2));
-            height: 82%;
-            width: 92%;
             transition: 0.2s;
         }
         div{

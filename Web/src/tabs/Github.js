@@ -4,6 +4,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from 'react-ionicons/lib/LogoGithub';
 import LinkedinIcon from 'react-ionicons/lib/LogoLinkedin';
 import InstagranIcon from 'react-ionicons/lib/LogoInstagram';
+import Menu from '@material-ui/icons/Menu';
 
 import { 
     GithubContainer
@@ -12,6 +13,11 @@ import {
 export default function Github(props){
     return(
         <GithubContainer>
+            <button className="mobileBTN" onClick={props.menuMobile}>
+                <span>
+                    <Menu style={{color: '#fff', fontSize: '3rem'}} />
+                </span>
+            </button>
             <div>
                 <h2>
                     Olá, sou Johnatan
@@ -24,10 +30,7 @@ export default function Github(props){
                     Usando a API complexa como do pokeapi que possui toneladas de informações acredito muito que daqui em diante vou ter mais facilidade de trabalhar com requests HTTP.
                 </p>
                 <p>
-                    Quando olhei esta API vi uma grande oportunidade para criar esse app pois possuia um conhecimento do React mas apenas teórico mas usei o que aprendi no React para trabalhar em um projeto em React Native e só agora, aqui, tive a chance de executar tudo que aprendi na teoria e tudo que executei no React Native aqui na Pokedex.
-                </p>
-                <p>
-                    Gostei Bastante de ter trabalhado neste pequeno projeto, tive alguns desafios mas deu tudo certo no final que eu havia planejado pois gostaria de fazer-lo em 1 semana e deu certo. Caso esteja vendo esse projeto e quiser implementar algo por favor fique a vontade <span role="img" aria-label="valeu?">😁</span>.
+                    Quando olhei esta API vi uma grande oportunidade para criar esse app pois possuia um conhecimento do React mas apenas teórico, mas usei o que aprendi para trabalhar em um projeto em React Native e só agora, aqui, tive a chance de executar tudo que aprendi na teoria e tudo que executei no React Native aqui na Pokedex.
                 </p>
                 <p>
                     Não se esqueça de conferir repositório abaixo e as minhas redes sociais <span role="img" aria-label="Valeu Falou!">👋</span>

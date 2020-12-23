@@ -14,7 +14,7 @@ export default function SideBar(props){
                 >
                     <img src={require('../images/logos/pokemon.png')} alt="logo pokemon"/>
                 </a>
-                    <h1>Pokedex</h1>
+                    <h1>Pokédex</h1>
             </div>
             <WrapperBtn onClick={props.onClickHome}>
                 <HomeIcon style={{color: "white", fontSize: 35, transition: '0.3s'}} />

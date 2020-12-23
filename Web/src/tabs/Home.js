@@ -7,6 +7,7 @@ import FacebookIcon from 'react-ionicons/lib/LogoFacebook';
 import TwitterIcon from 'react-ionicons/lib/LogoTwitter';
 import YoutubeIcon from 'react-ionicons/lib/LogoYoutube';
 import InstagranIcon from 'react-ionicons/lib/LogoInstagram';
+import Menu from '@material-ui/icons/Menu';
 
 import { 
     HomeContainer, 
@@ -37,8 +38,13 @@ export default function Home(props){
     }, [])
     return(
         <HomeContainer>
+            <button className="mobileBTN" onClick={props.menuMobile}>
+                <span>
+                    <Menu style={{color: '#fff', fontSize: '3rem'}} />
+                </span>
+            </button>
             <HomeHeader>
-                <h1>Bem vindo ao pokedex!</h1>
+                <h1>Bem vindo ao pokédex!</h1>
                 <img src={require('../images/logos/logopoke.png')} alt="logo" />
             </HomeHeader>
 
@@ -54,7 +60,7 @@ export default function Home(props){
             </HomeBanner>
 
             <HomeBtn onClick={props.onClickPokemon}>
-                <h2>Ver mais Pokemons:</h2>
+                <h2>Ver mais Pokémons:</h2>
             </HomeBtn>
 
             <HomePokemons>

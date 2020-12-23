@@ -13,15 +13,15 @@ export default function Separator(props){
         <div className="separator">
             <div className="separator_indicator"></div>
             {props.iconName === 'graphic' ?
-                <GraphicIcon style={{color: Colors.mainColors.blueLight, fontSize: 40, marginLeft: 10}} />
+                <GraphicIcon style={{color: Colors.mainColors.blueLight, fontSize: '2.4rem', marginLeft: 10}} />
             :
             props.iconName === 'flash' ?
-                <FlashIcon style={{color: Colors.mainColors.blueLight, fontSize: 40, marginLeft: 10}} />
+                <FlashIcon style={{color: Colors.mainColors.blueLight, fontSize: '2.4rem', marginLeft: 10}} />
             :
             props.iconName === 'paw' ?
-                <PawIcon color={Colors.mainColors.blueLight} style={{marginLeft: 10}} fontSize="40px"/>
+                <PawIcon color={Colors.mainColors.blueLight} style={{marginLeft: 10}} fontSize="2.4rem"/>
             :
-                <GraphicIcon style={{color: Colors.mainColors.blueLight, fontSize: 40, marginLeft: 10}} />
+                <GraphicIcon style={{color: Colors.mainColors.blueLight, fontSize: '2.4rem', marginLeft: 10}} />
             }
             <p>Status:</p>
         </div>

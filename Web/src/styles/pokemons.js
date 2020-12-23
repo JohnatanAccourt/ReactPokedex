@@ -86,7 +86,7 @@ export const PokemonsContainer = styled.div `
     flex-direction: row;
     .tip4user{
         position: absolute;
-        top: 0;
+        top: 1%;
         background-color: ${Colors.mainColors.blueStrong};
         padding: 1%;    
         z-index: 100;
@@ -101,7 +101,6 @@ export const PokemonsContainer = styled.div `
         flex-direction: row;  
         flex-wrap: wrap;      
         justify-content: space-around;
-        /* align-content: flex-start; */
         
         overflow-x: scroll;
         overflow-y: none;
@@ -112,6 +111,31 @@ export const PokemonsContainer = styled.div `
         margin-left: auto;
         background: ${Colors.mainColors.blueMid};
         animation: ${toBlueMid} 1s 0s forwards;
+        .mobileBTN{
+            display: none;
+            position: fixed;
+            top: 1%;
+            left: 1%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            z-index: 10000;
+            @media(max-width: 1000px){
+                display: block;
+            }
+            span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80px;
+                height: 80px;
+                border-radius: 80px;
+                background: ${Colors.mainColors.blueStrong};
+                
+            }
+            
+        }
         .fixFlexWrap{
             height: 0;
             width: '200px';
@@ -126,19 +150,16 @@ export const PokemonsContainer = styled.div `
             align-items: center;
             flex-direction: column;
             background: ${Colors.mainColors.yellow};
-            height: 38vh;
-            width: 200px;
+            width: 20vw;
             margin: 2px; 
             img{
-                padding: 5px 0px 5px 0px;
+                padding: 7% 4%;
                 height: 80%;
                 width: 90%;
                 cursor: pointer;
             }
             img:hover {
                 filter: drop-shadow(7px 7px 0 rgba(0, 0, 0, 0.2));
-                height: 82%;
-                width: 92%;
                 transition: 0.2s;
                 cursor: pointer;
             }
@@ -154,12 +175,17 @@ export const PokemonsContainer = styled.div `
                     font-family: ${font};
                     font-weight: ${fontMedium};
                     cursor: pointer;
+                    @media(max-width: 500px){
+                        font-size: 1em;
+                    }
                 }
+            }
+            @media(max-width: 600px){
+                width: 32vw;
             }
         }
     }
     .footer{
-        /* position: relative; */
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -187,6 +213,9 @@ export const PokemonsContainer = styled.div `
             color: white;
             font-size: 1em;
             cursor: pointer;
+            @media(max-width: 500px){
+                font-size: 0.7em;
+            }
         }
     }
     .teste{
@@ -205,6 +234,7 @@ export const PokemonsContainer = styled.div `
         overflow-x: scroll;
         overflow-y: none;
         overflow-x: hidden;
+        
         ::-webkit-scrollbar {
             width: 0px;
             background: transparent; /* make scrollbar transparent */
@@ -223,10 +253,15 @@ export const PokemonsContainer = styled.div `
                 margin-top: 10px;
                 font-family: ${font};
                 font-weight: ${fontBold};
+                @media(max-width: 500px){
+                    font-size: 1em;
+                }
             }
             img{
-                width: 200px;
-                height: 200px;
+                max-width: 15vw;
+                @media(max-width: 500px){
+                    max-width: 20vw;
+                }
             }
         }
         .separator{
@@ -238,6 +273,9 @@ export const PokemonsContainer = styled.div `
             height: 45px;
             padding: 5px 0px 5px 0px;
             background-color: ${Colors.mainColors.blueMid};
+            @media(max-width: 500px){
+                height: 20px;
+            }
             .separator_indicator{
                 position: absolute;
                 width: 3%;
@@ -250,6 +288,9 @@ export const PokemonsContainer = styled.div `
                 font-weight: ${fontBold};
                 color: white;
                 margin-left: 10px;
+                @media(max-width: 500px){
+                    font-size: 0.8em;
+                }
             }
         }
         .status{
@@ -261,12 +302,18 @@ export const PokemonsContainer = styled.div `
                 font-weight: ${fontBold};
                 color: white;
                 margin-bottom: 3px;
+                @media(max-width: 500px){
+                    font-size: 0.7em;
+                }
             }
             .bar{
                 width: 95%;
                 height: 13px;
                 background-color: ${Colors.statsColors.empty};
                 border-radius: 30px;
+                @media(max-width: 500px){
+                    height: 9px;
+                }
                 .filled_bar_life{
                     height: 100%;
                     background-color: ${Colors.statsColors.life};
@@ -327,6 +374,9 @@ export const PokemonsContainer = styled.div `
                 font-weight: ${fontBold};
                 color: white;
                 padding-top: 5px;
+                @media(max-width: 500px){
+                    font-size: 0.8em;
+                }
             }
         }
         .pokemon_type{
@@ -339,6 +389,9 @@ export const PokemonsContainer = styled.div `
             img{
                 height: 130px;
                 width: 130px;
+                @media(max-width: 500px){
+                    height: 100px;
+                }
             }
             p{
                 font-size: 1.3em;
@@ -346,6 +399,9 @@ export const PokemonsContainer = styled.div `
                 font-weight: ${fontBold};
                 color: white;
                 padding-top: 5px;
+                @media(max-width: 500px){
+                    font-size: 1em;
+                }
             }
         }
         .wrapper_measure{
@@ -366,19 +422,34 @@ export const PokemonsContainer = styled.div `
                 font-family: ${font};
                 font-weight: ${fontBold};
                 color: white;
+                @media(max-width: 500px){
+                    font-size: 1.1em;
+                }
             }
             .pokemon_weight{
                 font-size: 2em;
                 font-family: ${font};
                 font-weight: ${fontBold};
                 color: white;
+                @media(max-width: 500px){
+                    font-size: 1.1em;
+                }
             }
             .bottom_description{
                 font-size: 1.3em;
                 font-family: ${font};
                 font-weight: ${fontLight};
                 color: white;
+                @media(max-width: 500px){
+                    font-size: 1em;
+                }
             }
+        }
+        @media(max-width: 1000px){
+            width: 200%;
+        }
+        @media(max-width: 600px){
+            width: 400%;
         }
     }
 `

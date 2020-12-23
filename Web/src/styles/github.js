@@ -18,6 +18,32 @@ export const GithubContainer = styled.div `
     width: 100%;
     display: flex;
     flex-direction: row;
+    @media(max-width: 1400px){
+        flex-direction: column-reverse;
+    }
+    .mobileBTN{
+        display: none;
+        position: fixed;
+        top: 1%;
+        left: 1%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        z-index: 10000;
+        @media(max-width: 1000px){
+            display: block;
+        }
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 80px;
+            background: ${Colors.mainColors.blueStrong};   
+        }
+    }
     div{
         overflow-x: scroll;
         overflow-y: none;
@@ -27,6 +53,9 @@ export const GithubContainer = styled.div `
         padding: 0% 3% 0% 3%;
         background: ${Colors.mainColors.blueMid};
         animation: ${toBlueMid} 1s 0s forwards;
+        @media(max-width: 1400px){
+            width: 95%;
+        }
         h2{
             text-align: left;
             font-size: 3em;
@@ -89,9 +118,18 @@ export const GithubContainer = styled.div `
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media(max-width: 1400px){
+            flex-direction: row;
+            justify-content: space-evenly;
+            height: 7%;
+            width: 100%;
+        }
         a{
             margin-top: 25px;
             transition: 0.7s;
+            @media(max-width: 1400px){
+                margin-top: 10px;
+            }
         }
         a:hover{
             transform: rotate(360deg);
@@ -109,6 +147,11 @@ export const GithubContainer = styled.div `
         overflow-x: scroll;
         overflow-y: none;
         overflow-x: hidden;
+        @media(max-width: 1400px){
+            height: 100vh;
+            width: 100%;
+            overflow-x: none;
+        }
         .imgPerson{
             width: 200px;
             height: 400px;
@@ -120,6 +163,10 @@ export const GithubContainer = styled.div `
             border-style: solid;
             border-width: 10px;
             border-color: ${Colors.mainColors.blueLight};
+            @media(max-width: 1400px){
+                width: 200px;
+                height: 550px;
+            }
         }
         h1{
             width: 50%;
@@ -143,6 +190,9 @@ export const GithubContainer = styled.div `
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
+            @media(max-width: 1400px){
+                height: 250px;
+            }
             img{
                 margin-top: 30px;
                 width: 100px;
