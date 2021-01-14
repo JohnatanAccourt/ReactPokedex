@@ -16,19 +16,19 @@ export default function SideBar(props){
                 </a>
                     <h1>Pokédex</h1>
             </div>
-            <WrapperBtn onClick={props.onClickHome}>
+            <WrapperBtn data-testid="onclickHome" onClick={props.onClickHome}>
                 <HomeIcon style={{color: "white", fontSize: 35, transition: '0.3s'}} />
-                <button>Home</button>
+                <button aria-label="click-home">Home</button>
             </WrapperBtn>
 
-            <WrapperBtn onClick={props.onClickPokemon}>
+            <WrapperBtn data-testid="onclickPokemon" onClick={props.onClickPokemon}>
                 <img src={require('../images/logos/pokemon.png')} alt="pokeball"/>
-                <button>Pokemons</button>
+                <button aria-label="click-pokemon">Pokemons</button>
             </WrapperBtn>
 
-            <WrapperBtn onClick={props.onClickGitHub}>
+            <WrapperBtn data-testid="onclickGihub" onClick={props.onClickGitHub}>
                 <GitHubIcon color="#fff" fontSize="35px" style={{transition: '0.3s'}} />
-                <button>GitHub</button>
+                <button aria-label="click-github">GitHub</button>
             </WrapperBtn>
         </SideBarContainer>
     )

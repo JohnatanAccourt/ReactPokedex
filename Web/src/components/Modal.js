@@ -10,7 +10,7 @@ import {
 
 export default function Modal(props){
     return(
-        <ModalContainer>
+        <ModalContainer data-testid="modalTest">
             <div>
                 <WrapperBtn onClick={props.onClickHome}>
                     <HomeIcon style={{color: "white", fontSize: 35, transition: '0.3s'}} />
