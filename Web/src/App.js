@@ -6,7 +6,7 @@ import Pokemons from './tabs/Pokemons';
 import Github from './tabs/Github';
 import Modal from './components/Modal';
 
-import './styles/reset.css';
+import './styles/reset.css'; 
 import { Container } from './styles/grid';
 
 function App() {
