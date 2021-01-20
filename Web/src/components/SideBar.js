@@ -2,6 +2,7 @@ import React from 'react';
 import HomeIcon from '@material-ui/icons/Home';
 import GitHubIcon from 'react-ionicons/lib/LogoGithub';
 import { SideBarContainer, WrapperBtn } from '../styles/sidebar.js';
+import PropTypes from 'prop-types';
 
 export default function SideBar(props){
     return(
@@ -32,4 +33,10 @@ export default function SideBar(props){
             </WrapperBtn>
         </SideBarContainer>
     )
+}
+
+SideBar.propTypes = {
+    onClickHome: PropTypes.func,
+    onClickPokemon: PropTypes.func,
+    onClickGitHub: PropTypes.func
 }

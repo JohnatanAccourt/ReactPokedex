@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import SideBar from '../../components/SideBar';
 
-import { findByTestAtrr } from '../Utils';
+import { findByTestAtrr, checkProps } from '../Utils';
 
 const setUp = (props={}) => {
     const component = shallow(<SideBar {...props} />);
@@ -26,7 +26,23 @@ describe('SideBar component', () => {
         expect(wrapper.length).toBe(1);
     });
 
+    describe('Checking proptypes', () => {  
+
+        it('Should not throw a warning', () => {
+            const expectProps = {
+                onClickHome: () => {},
+                onClickPokemon: () => {},
+                onClickGitHub: () => {}
+            };
+
+            const propsErr = checkProps(SideBar, expectProps);
+            expect(propsErr).toBeUndefined();
+        });
+
+    });
+
     describe('Should render sideBar buttons without errors', () => {
+
         it('Home', () => {
             const wrapper = findByTestAtrr(component, 'click-home');
             expect(wrapper.length).toBe(1);
@@ -41,5 +57,6 @@ describe('SideBar component', () => {
             const wrapper = findByTestAtrr(component, 'click-github');
             expect(wrapper.length).toBe(1);
         });
+        
     });
 });
