@@ -59,4 +59,44 @@ describe('SideBar component', () => {
         });
         
     });
+
+    describe('Testing click', () => {
+        let wrapper; 
+        let mockFunc; 
+
+        beforeEach(() => {
+            mockFunc = jest.fn();
+            const props = {
+                onClickHome: mockFunc,
+                onClickPokemon: mockFunc,
+                onClickGitHub: mockFunc
+            };
+            wrapper = shallow(<SideBar {...props} />);
+        });
+
+        it('Should emit callback on HOME click event', () => {
+            const button = findByTestAtrr(wrapper, 'click-wrapper-home');
+            button.simulate('click');
+
+            const callback = mockFunc.mock.calls.length;
+            expect(callback).toBe(1);
+        });
+
+        it('Should emit callback on Pokemon click event', () => {
+            const button = findByTestAtrr(wrapper, 'click-wrapper-pokemon');
+            button.simulate('click');
+
+            const callback = mockFunc.mock.calls.length;
+            expect(callback).toBe(1);
+        });
+
+        it('Should emit callback on GitHub click event', () => {
+            const button = findByTestAtrr(wrapper, 'click-wrapper-github');
+            button.simulate('click');
+
+            const callback = mockFunc.mock.calls.length;
+            expect(callback).toBe(1);
+        });
+    });
+
 });
