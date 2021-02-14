@@ -47,5 +47,4 @@ Projeto com o objetivo de consumir a api da pokeapi que é bem completa e comple
 <p align="center">
 <img src="https://raw.githubusercontent.com/JohnatanAccourt/ReactPokedex/master/Web/src/images/logos/logopoke.png" />
 </p>
->>>>>>> 9bec2c54e17ef522854f0d0cf6668dfc8e5635cd
 
